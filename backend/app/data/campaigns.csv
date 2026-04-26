@@ -1,0 +1,6 @@
+campaign_id,campaign_name,platform,spend,impressions,clicks,conversions,revenue,status
+CAMP001,Summer Sale Search,Google Ads,1200,85000,2100,160,5800,Active
+CAMP002,Retargeting Display,Meta Ads,900,120000,900,35,1400,Active
+CAMP003,Brand Awareness Push,LinkedIn Ads,1500,60000,520,18,900,Warning
+CAMP004,Ecommerce Shopping Ads,Google Ads,2200,95000,3100,280,9800,Active
+CAMP005,Low Funnel Remarketing,Meta Ads,700,40000,300,12,450,Critical
