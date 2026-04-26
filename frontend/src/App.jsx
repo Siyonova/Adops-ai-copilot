@@ -30,6 +30,7 @@ export default function App() {
   const [copilot, setCopilot] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [asking, setAsking] = useState(false);
 
   useEffect(() => {
     async function loadData() {
@@ -51,9 +52,20 @@ export default function App() {
   }, []);
 
   const handleAsk = async () => {
+  try {
+    setAsking(true);
+    setCopilot(null);
     const res = await askCopilot(question);
     setCopilot(res.data);
-  };
+  } catch (err) {
+    setCopilot({
+      answer: "The AI Copilot could not generate a response. Please check that the backend is running and Gemini API key is configured.",
+      evidence: [],
+    });
+  } finally {
+    setAsking(false);
+  }
+};
 
   const totalSpend = campaigns.reduce((sum, c) => sum + c.spend, 0);
   const avgROAS =
@@ -182,37 +194,72 @@ export default function App() {
                 />
                 <button
                   onClick={handleAsk}
-                  className="rounded-2xl bg-indigo-500 px-6 py-3 font-semibold hover:bg-indigo-400 transition"
+                  disabled={asking}
+                  className="rounded-2xl bg-indigo-500 px-6 py-3 font-semibold transition hover:bg-indigo-400 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  Ask Copilot
+                  {asking ? "Analyzing..." : "Ask Copilot"}
                 </button>
               </div>
+              {copilot &&  (
+               <div className="mt-6 rounded-3xl bg-slate-950/90 border border-white/10 p-6 space-y-6">
+                    <div>
+                      <p className="text-xs uppercase tracking-widest text-indigo-300 mb-2">
+                        Gemini RAG Response
+                      </p>
 
-              {copilot && (
-                <div className="mt-6 rounded-2xl bg-slate-950/80 border border-white/10 p-5 space-y-4">
-                  <p className="text-slate-200">{copilot.answer}</p>
+                      <div className="prose prose-invert max-w-none">
+                        {copilot.answer.split("\n").map((line, index) => {
+                          if (line.startsWith("**") || line.match(/^\d\./)) {
+                            return (
+                              <h3 key={index} className="mt-5 mb-2 text-lg font-semibold text-white">
+                                {line.replaceAll("*", "")}
+                              </h3>
+                            );
+                          }
 
-                  <div>
-                    <h3 className="font-semibold mb-2">Recommended Actions</h3>
-                    <ul className="list-disc list-inside text-slate-300 space-y-1">
-                      {copilot.recommended_actions.map((action, index) => (
-                        <li key={index}>{action}</li>
-                      ))}
-                    </ul>
-                  </div>
+                          if (line.trim().startsWith("-") || line.trim().startsWith("*")) {
+                            return (
+                              <p key={index} className="ml-4 text-slate-300">
+                                • {line.replace("-", "").replace("*", "").trim()}
+                              </p>
+                            );
+                          }
 
-                  <div>
-                    <h3 className="font-semibold mb-2">Evidence</h3>
-                    <div className="space-y-2">
-                      {copilot.evidence.map((e, index) => (
-                        <p key={index} className="rounded-xl bg-white/5 p-3 text-sm text-slate-300">
-                          {e}
-                        </p>
-                      ))}
+                          return (
+                            <p key={index} className="leading-7 text-slate-300">
+                              {line.replaceAll("*", "")}
+                            </p>
+                          );
+                        })}
+                      </div>
                     </div>
+
+                    {copilot.evidence && copilot.evidence.length > 0 && (
+                      <div>
+                        <h3 className="mb-3 text-lg font-semibold text-white">
+                          Retrieved Evidence from FAISS
+                        </h3>
+
+                        <div className="grid gap-3">
+                          {copilot.evidence.map((doc, index) => (
+                            <div
+                              key={index}
+                              className="rounded-2xl border border-indigo-400/20 bg-indigo-500/5 p-4 text-sm text-slate-300"
+                            >
+                              <div className="mb-2 text-xs font-semibold uppercase tracking-widest text-indigo-300">
+                                Evidence #{index + 1}
+                              </div>
+
+                              <pre className="whitespace-pre-wrap font-sans leading-6">
+                                {doc}
+                              </pre>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              )}
+                )}
             </section>
           </>
         )}

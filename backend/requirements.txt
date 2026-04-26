@@ -7,3 +7,7 @@ pydantic
 scikit-learn
 sentence-transformers
 faiss-cpu
+google-genai
+sentence-transformers
+faiss-cpu
+python-dotenv

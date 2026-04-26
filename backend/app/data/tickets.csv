@@ -1,0 +1,6 @@
+ticket_id,campaign_id,issue,customer_message,resolution
+T001,CAMP002,Low CTR,"Our retargeting ads are getting impressions but very few clicks.","Refresh creatives, narrow audience segments, and test stronger CTA copy."
+T002,CAMP003,High CPC,"LinkedIn campaign is spending too much per click with low conversions.","Reduce broad targeting, test lower bid caps, and focus on job-title based audience."
+T003,CAMP005,Poor ROAS,"Remarketing campaign is spending but revenue is very low.","Pause weak ad sets, improve landing page offer, and cap daily budget."
+T004,CAMP003,Low Conversion Rate,"Users click the ad but do not submit the form.","Audit landing page speed, improve lead form clarity, and align ad promise with page content."
+T005,CAMP005,Audience Fatigue,"Frequency is high and engagement has dropped.","Rotate creatives, expand audience pool, and exclude recent converters."
