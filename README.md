@@ -13,27 +13,23 @@
 
 ## 🌐 Live Demo
 
-🔗 **Frontend:** YOUR_VERCEL_LINK  
-🔗 **Backend API Docs:** YOUR_HUGGINGFACE_BACKEND_URL/docs
+🔗 **Frontend:** [YOUR_VERCEL_LINK](https://YOUR_VERCEL_LINK)  
+🔗 **Backend API Docs:** [YOUR_HUGGINGFACE_BACKEND_URL/docs](https://YOUR_HUGGINGFACE_BACKEND_URL/docs)
 
 ---
 
 ## 🖼️ Product Preview
 
 ### Hero + Dashboard
-
 ![Dashboard](assets/dashboard.png)
 
 ### Executive Analytics + Charts
-
 ![Charts](assets/charts.png)
 
 ### AI Copilot (Real LLM + RAG)
-
 ![Copilot](assets/copilot.png)
 
 ### PDF Executive Report
-
 ![Report](assets/report.png)
 
 ---
@@ -41,11 +37,10 @@
 ## 💡 Problem Statement
 
 Digital marketing teams often struggle to quickly identify:
-
-- Why campaigns are underperforming  
-- Which metrics are causing revenue loss  
-- What actions should be prioritized  
-- How to combine support-ticket feedback with campaign data  
+* Why campaigns are underperforming
+* Which metrics are causing revenue loss
+* What actions should be prioritized
+* How to combine support-ticket feedback with campaign data
 
 This project solves that using a **real AI assistant** backed by retrieval and LLM reasoning.
 
@@ -54,43 +49,35 @@ This project solves that using a **real AI assistant** backed by retrieval and L
 ## 🧠 What It Does
 
 Users can ask questions like:
-
-> “Why is CAMP005 performing badly and what should we do?”
+> *“Why is CAMP005 performing badly and what should we do?”*
 
 The platform then:
-
-1. Retrieves campaign KPI records and support-ticket evidence  
-2. Uses vector search (FAISS) to find relevant context  
-3. Sends grounded context to Gemini LLM  
-4. Returns structured recommendations with evidence  
+1.  **Retrieves** campaign KPI records and support-ticket evidence.
+2.  Uses **vector search (FAISS)** to find relevant context.
+3.  Sends grounded context to **Gemini LLM**.
+4.  Returns **structured recommendations** with evidence.
 
 ---
 
 ## ⚙️ Core Features
 
 ### 📊 Analytics Dashboard
-
-- CTR, CPC, Conversion Rate, ROAS tracking  
-- Campaign health scoring  
-- At-risk campaign detection  
-- Spend analysis & KPI cards  
+* CTR, CPC, Conversion Rate, and ROAS tracking.
+* Campaign health scoring & at-risk detection.
+* Spend analysis via interactive KPI cards.
 
 ### 🤖 AI Troubleshooting Copilot
-
-- Real Gemini LLM responses  
-- Retrieval-Augmented Generation (RAG)  
-- Evidence-backed recommendations  
-- Executive summaries + root cause analysis  
+* Real-time Gemini LLM responses.
+* Retrieval-Augmented Generation (RAG) for factual grounding.
+* Executive summaries + Root cause analysis.
 
 ### 📄 Executive Reporting
-
-- Downloadable PDF performance report  
-- Business-ready summaries for stakeholders  
+* Downloadable PDF performance reports.
+* Business-ready summaries for stakeholders.
 
 ### ☁️ Deployment
-
-- Frontend hosted on Vercel  
-- AI backend hosted on Hugging Face Spaces  
+* **Frontend:** Hosted on Vercel.
+* **Backend:** Hosted on Hugging Face Spaces.
 
 ---
 
@@ -110,13 +97,85 @@ FAISS Vector Search
 Gemini LLM
         ↓
 Grounded Recommendations + Evidence
+
 ```
-## Tech Stack
+## 🛠️ Tech Stack
+
+**Frontend**
+* **React.js / Vite**
+* **Tailwind CSS / Framer Motion**
+* **Recharts / Axios**
+* **jsPDF / html2canvas**
+
+**Backend**
+* **FastAPI / Python**
+* **Pandas / NumPy**
+* **FAISS / Sentence Transformers**
+* **Gemini API / Scikit-learn**
+
+---
+
+## 📈 Business Impact
+This platform simulates how growth and AdOps teams can:
+* **Reduce manual investigation** time.
+* **Detect revenue leaks** faster.
+* **Prioritize** weak campaigns instantly.
+* Use AI to **accelerate optimization** decisions.
+
+---
+
+## 🧪 Example AI Output
+
+> **Executive Summary:** > CAMP005 is underperforming due to poor ROAS, low CTR, and audience fatigue.
+>
+> **Evidence Found:** > Retrieved diagnostics and support-ticket records for CAMP005.
+>
+> **Root Cause:** > Weak engagement, inefficient spend, remarketing fatigue.
+>
+> **Recommended Actions:** > * Rotate creatives  
+> * Expand audience pool  
+> * Exclude recent converters  
+> * Pause weak ad sets  
+> * Improve landing page offer  
+
+---
+
+## 📂 Project Structure
+
+```text
+Adops-ai-copilot/
+│── frontend/      # React dashboard
+│── backend/       # FastAPI + RAG + Gemini backend
+│── assets/        # Screenshots / README visuals
+│── README.md
+
+```
+```markdown
+## 🚀 Run Locally
+
 ### Frontend
-React.js
-Vite
-Tailwind CSS
-Framer Motion
-Recharts
-Axios
-jsPDF / html2canvas
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+---
+
+## 🎯 Resume Bullet
+> Built and deployed a full-stack AI AdTech Copilot using **React, FastAPI, FAISS, Sentence Transformers, and Gemini LLM** with Retrieval-Augmented Generation to diagnose campaign performance issues and generate evidence-backed optimization recommendations.
+
+---
+
+## 👩‍💻 Author
+**Chaandini / Siyonova** Passionate about building AI systems, analytics products, and business-focused ML solutions.
+
+🔗 **GitHub:** [https://github.com/Siyonova](https://github.com/Siyonova)
+```
