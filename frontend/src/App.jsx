@@ -1,3 +1,5 @@
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -31,6 +33,25 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [asking, setAsking] = useState(false);
+
+
+  const downloadPDFReport = async () => {
+  const report = document.getElementById("report-section");
+
+  const canvas = await html2canvas(report, {
+    scale: 2,
+    backgroundColor: "#020617",
+  });
+
+  const imgData = canvas.toDataURL("image/png");
+  const pdf = new jsPDF("p", "mm", "a4");
+
+  const pdfWidth = pdf.internal.pageSize.getWidth();
+  const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+  pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+  pdf.save("adops-ai-copilot-report.pdf");
+};
 
   useEffect(() => {
     async function loadData() {
@@ -83,7 +104,7 @@ export default function App() {
   <Navbar />
       <Hero />
 
-      <main id="dashboard" className="max-w-7xl mx-auto px-8 py-8 space-y-8">
+      <main id="report-section" className="max-w-7xl mx-auto px-8 py-8 space-y-8">
         {loading && (
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-300">
             Loading campaign intelligence...
@@ -98,6 +119,15 @@ export default function App() {
 
         {!loading && !error && (
           <>
+            <div className="flex justify-end">
+              <button
+                onClick={downloadPDFReport}
+                className="rounded-2xl bg-indigo-500 px-5 py-3 font-semibold hover:bg-indigo-400 transition"
+              >
+                Download Executive PDF Report
+              </button>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
               <MetricCard icon={<DollarSign />} label="Total Spend" value={`$${totalSpend.toLocaleString()}`} />
               <MetricCard icon={<TrendingUp />} label="Avg ROAS" value={avgROAS.toFixed(2)} />

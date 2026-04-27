@@ -21,10 +21,12 @@ export default function Navbar() {
         </div>
 
         <a
-          href="https://github.com/Siyonova/Ad-Campaign-Diagnostics-Platform"
-          target="_blank"
-          className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/10"
+        href="https://github.com/Siyonova/Adops-ai-copilot"
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/10"
         >
+  
           <GitBranch size={16} />
           GitHub
         </a>
