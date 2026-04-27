@@ -1,4 +1,4 @@
-# 🚀 AdOps AI Copilot
+# AdOps AI Copilot
 
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
@@ -11,14 +11,14 @@
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
-🔗 **Frontend:** [YOUR_VERCEL_LINK](https://YOUR_VERCEL_LINK)  
-🔗 **Backend API Docs:** [YOUR_HUGGINGFACE_BACKEND_URL/docs](https://YOUR_HUGGINGFACE_BACKEND_URL/docs)
+ **Frontend:** [YOUR_VERCEL_LINK](https://adops-ai-copilot.vercel.app/)  
+ **Backend API Docs:** [YOUR_HUGGINGFACE_BACKEND_URL/docs](https://mosscode-adops-ai-copilot-api.hf.space/docs)
 
 ---
 
-## 🖼️ Product Preview
+##  Product Preview
 
 ### Hero + Dashboard
 ![Dashboard](assets/dashboard.png)
@@ -34,7 +34,7 @@
 
 ---
 
-## 💡 Problem Statement
+##  Problem Statement
 
 Digital marketing teams often struggle to quickly identify:
 * Why campaigns are underperforming
@@ -46,7 +46,7 @@ This project solves that using a **real AI assistant** backed by retrieval and L
 
 ---
 
-## 🧠 What It Does
+##  What It Does
 
 Users can ask questions like:
 > *“Why is CAMP005 performing badly and what should we do?”*
@@ -59,29 +59,29 @@ The platform then:
 
 ---
 
-## ⚙️ Core Features
+##  Core Features
 
-### 📊 Analytics Dashboard
+###  Analytics Dashboard
 * CTR, CPC, Conversion Rate, and ROAS tracking.
 * Campaign health scoring & at-risk detection.
 * Spend analysis via interactive KPI cards.
 
-### 🤖 AI Troubleshooting Copilot
+###  AI Troubleshooting Copilot
 * Real-time Gemini LLM responses.
 * Retrieval-Augmented Generation (RAG) for factual grounding.
 * Executive summaries + Root cause analysis.
 
-### 📄 Executive Reporting
+###  Executive Reporting
 * Downloadable PDF performance reports.
 * Business-ready summaries for stakeholders.
 
-### ☁️ Deployment
+###  Deployment
 * **Frontend:** Hosted on Vercel.
 * **Backend:** Hosted on Hugging Face Spaces.
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```text
 React + Vite Frontend
@@ -99,7 +99,7 @@ Gemini LLM
 Grounded Recommendations + Evidence
 
 ```
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend**
 * **React.js / Vite**
@@ -115,7 +115,7 @@ Grounded Recommendations + Evidence
 
 ---
 
-## 📈 Business Impact
+##  Business Impact
 This platform simulates how growth and AdOps teams can:
 * **Reduce manual investigation** time.
 * **Detect revenue leaks** faster.
@@ -124,7 +124,7 @@ This platform simulates how growth and AdOps teams can:
 
 ---
 
-## 🧪 Example AI Output
+##  Example AI Output
 
 > **Executive Summary:** > CAMP005 is underperforming due to poor ROAS, low CTR, and audience fatigue.
 >
@@ -140,7 +140,7 @@ This platform simulates how growth and AdOps teams can:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 Adops-ai-copilot/
@@ -151,7 +151,7 @@ Adops-ai-copilot/
 
 ```
 ```markdown
-## 🚀 Run Locally
+##  Run Locally
 
 ### Frontend
 ```bash
@@ -169,13 +169,13 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🎯 Resume Bullet
+##  Resume Bullet
 > Built and deployed a full-stack AI AdTech Copilot using **React, FastAPI, FAISS, Sentence Transformers, and Gemini LLM** with Retrieval-Augmented Generation to diagnose campaign performance issues and generate evidence-backed optimization recommendations.
 
 ---
 
-## 👩‍💻 Author
-**Chaandini / Siyonova** Passionate about building AI systems, analytics products, and business-focused ML solutions.
+##  Author
+** Siyonova** Passionate about building AI systems, analytics products, and business-focused ML solutions.
 
-🔗 **GitHub:** [https://github.com/Siyonova](https://github.com/Siyonova)
+ **GitHub:** [https://github.com/Siyonova](https://github.com/Siyonova)
 ```
