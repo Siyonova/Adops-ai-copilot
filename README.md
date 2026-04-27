@@ -110,3 +110,13 @@ FAISS Vector Search
 Gemini LLM
         ↓
 Grounded Recommendations + Evidence
+```
+## Tech Stack
+### Frontend
+React.js
+Vite
+Tailwind CSS
+Framer Motion
+Recharts
+Axios
+jsPDF / html2canvas
