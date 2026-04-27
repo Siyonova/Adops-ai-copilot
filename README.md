@@ -13,8 +13,8 @@
 
 ##  Live Demo
 
- **Frontend:** [YOUR_VERCEL_LINK](https://adops-ai-copilot.vercel.app/)  
- **Backend API Docs:** [YOUR_HUGGINGFACE_BACKEND_URL/docs](https://mosscode-adops-ai-copilot-api.hf.space/docs)
+ **Frontend:** [VERCEL_LINK](https://adops-ai-copilot.vercel.app/)  
+ **Backend API Docs:** [HUGGINGFACE_BACKEND_URL/docs](https://mosscode-adops-ai-copilot-api.hf.space/docs)
 
 ---
 
