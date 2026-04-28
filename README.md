@@ -349,11 +349,6 @@ This platform demonstrates how growth teams can:
 
 ---
 
-# Resume Bullet
-
-Built and deployed a full-stack AI AdTech Copilot using React, FastAPI, FAISS, Sentence Transformers, and Gemini LLM with Retrieval-Augmented Generation to diagnose campaign performance issues and generate evidence-backed optimization recommendations.
-
----
 
 # Author
 
